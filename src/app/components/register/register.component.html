@@ -1,0 +1,58 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <!-- <div class="fadeIn first">
+      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+    </div> -->
+
+    <!-- Registration Form -->
+    <form (ngSubmit)="this.onRegisterRequest()" ngNativeValidate>
+      <input
+        type="text"
+        id="userName"
+        class="fadeIn second"
+        name="userName"
+        placeholder="User Name"
+        [(ngModel)]="this.userProfile.userName"
+        required
+      />
+      <input
+        type="email"
+        id="email"
+        class="fadeIn second"
+        name="email"
+        placeholder="Email ID"
+        [(ngModel)]="this.userProfile.email"
+        required
+      />
+      <input
+        type="text"
+        id="password"
+        class="fadeIn third"
+        name="password"
+        placeholder="Password"
+        [(ngModel)]="this.userProfile.password"
+        required
+      />
+      <input
+        type="text"
+        id="role"
+        class="fadeIn third"
+        name="role"
+        placeholder="Role"
+        [(ngModel)]="this.userProfile.role"
+        required
+      />
+      <input type="submit" class="fadeIn fourth loginBtn" value="Register" />
+    </form>
+
+    <!-- Remind Password -->
+    <div id="formFooter">
+      <p>
+        {{ this.response }}
+      </p>
+    </div>
+  </div>
+</div>
